@@ -22,7 +22,7 @@ export const profile = {
   /** Positioning line. Paraphrases the research interests the university profile lists; claims nothing beyond them. */
   statement: "Second-language learning, teacher education and critical thinking in the English classroom.",
   intro:
-    "Lecturer in the Department of English at Leading University, Sylhet. This portfolio is built from the university's own faculty profile; everything else is added only after it has been confirmed.",
+    "My work centres on how people learn English as a second language and how teachers are prepared to teach it.",
   /**
    * Portrait supplied by Anam Ahmed (cropped 4:5 from the original, 900 × 1125; AVIF/WebP siblings sit beside the JPEG in
    * /public/images). The caption is deliberately neutral: the name only.
@@ -47,11 +47,11 @@ export const links = {
 
 export const facebookLabel = "English Spoken & Language Learning";
 
-/** Biography — plain statements of what the university profile says. No pronouns: preferred pronouns are unconfirmed. */
+/** Biography — first person, built only from what the university faculty profile states. */
 export const bio = [
-  "Anam Ahmed is a Lecturer in the Department of English at Leading University, Sylhet, Bangladesh.",
-  "The university's faculty profile records a second master's degree in Teaching English as a Second Language (TESL) from Kent State University in the United States, preceded by a master's in English Literature from the English Discipline at Khulna University and a B.A. (Honours) in English Language and Literature from Jatiya Kabi Kazi Nazrul Islam University.",
-  "The same profile lists research interests in second-language reading and writing, teacher education, lesson planning, critical thinking and social emotional learning, among others.",
+  "I am a Lecturer in the Department of English at Leading University in Sylhet, Bangladesh.",
+  "My training is in English and in the teaching of it. I hold a master's degree in Teaching English as a Second Language (TESL) from Kent State University in the United States, an earlier master's in English Literature from Khulna University, and a B.A. (Honours) in English Language and Literature from Jatiya Kabi Kazi Nazrul Islam University.",
+  "My research interests lie in second-language reading and writing, teacher education, lesson planning, critical thinking and social emotional learning.",
 ];
 
 export type Degree = { degree: string; field: string; institution: string; note?: string };

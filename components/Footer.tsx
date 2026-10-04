@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { nav } from "../lib/nav";
-import { profile, sources } from "../lib/data";
+import { profile } from "../lib/data";
 import ProfileLinks from "./ProfileLinks";
 
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         <div className="foot-bottom">
           <span>© 2026 {profile.name}</span>
-          <span>Drawn from the university faculty profile as read on {sources.checked}.</span>
+          <span>Details from the Leading University faculty profile.</span>
         </div>
       </div>
     </footer>

@@ -1,18 +1,21 @@
+import { Facebook } from "../../components/Icons";
 import Folio from "../../components/Folio";
 import Masthead from "../../components/Masthead";
-import PendingList from "../../components/PendingList";
-import { pending } from "../../lib/data";
+import { facebookLabel, links } from "../../lib/data";
 import { pageMetadata } from "../../lib/site";
 
-export const metadata = pageMetadata("Academic activities", "Conferences, seminars, workshops, academic service, awards and research projects of Anam Ahmed. None has been confirmed yet.", "/activities");
+export const metadata = pageMetadata("Academic activities", "Activities of Anam Ahmed connected with English spoken and English language teaching.", "/activities");
 
 export default function Activities() {
   return (
     <>
-      <Masthead label="Academic activities" path="/activities" title="Academic activities" lead="Talks, workshops, service, awards and projects, listed once each has been confirmed." />
+      <Masthead label="Academic activities" path="/activities" title="Academic activities" lead="Activities connected with English language teaching and learning." />
       <div className="wrap section">
-        <Folio title="To be confirmed" id="a-pending" pending="No activity has been confirmed, so none is listed.">
-          <PendingList items={pending.activities} />
+        <Folio title="English spoken" id="a-spoken">
+          <ul className="ledger">
+            <li><a href={links.facebook} target="_blank" rel="noopener noreferrer"><span className="l-t l-ico"><Facebook size={22} />{facebookLabel}</span><span className="label">Facebook page<span className="sr"> (opens in a new tab)</span></span></a></li>
+          </ul>
+          <p className="prose" style={{ marginTop: "1rem" }}>The page relates to English spoken and English language teaching activities.</p>
         </Folio>
       </div>
     </>
