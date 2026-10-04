@@ -84,7 +84,7 @@ export default function SiteHeader() {
           <ol>
             {[{ href: "/", label: "Home", d: "Cover" }, ...nav].map((l, n) => (
               <li key={l.href}>
-                <Link className="s-link" href={l.href} style={{ "--n": n } as React.CSSProperties} aria-current={isCurrent(l.href) ? "page" : undefined} onClick={() => { if (isCurrent(l.href)) setOpen(false); }}>
+                <Link className="s-link" href={l.href} style={{ "--n": n } as React.CSSProperties} aria-current={isCurrent(l.href) ? "page" : undefined} onClick={() => { if (l.href.split("#")[0] === pathname) setOpen(false); }}>
                   <span>{l.label}</span>
                   <span className="d">{l.d}</span>
                 </Link>
