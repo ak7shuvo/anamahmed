@@ -9,12 +9,11 @@ import { BASE_URL } from "../lib/site";
 
 const d = (ms: number) => ({ "--d": `${ms}ms` }) as React.CSSProperties;
 
-// What each page holds, and whether it has confirmed content yet.
 const ledger = [
-  { href: "/publications", label: "Publications", state: "Awaiting confirmation" },
-  { href: "/teaching", label: "Teaching", state: "Awaiting confirmation" },
-  { href: "/activities", label: "Academic activities", state: "Awaiting confirmation" },
-  { href: "/cv", label: "Curriculum vitae", state: "Awaiting approval" },
+  { href: "/publications", label: "Publications" },
+  { href: "/teaching", label: "Teaching" },
+  { href: "/activities", label: "Academic activities" },
+  { href: "/cv", label: "Curriculum vitae" },
 ];
 
 export default function Home() {
@@ -96,7 +95,7 @@ export default function Home() {
 
       <section className="sec" aria-labelledby="home-edu">
         <div className="wrap split">
-          <div className="sec-head"><p className="eyebrow">Education</p><h2 className="t-h2" id="home-edu">Education</h2><p className="label">Order as given by the university profile. Years pending.</p></div>
+          <div className="sec-head"><p className="eyebrow">Education</p><h2 className="t-h2" id="home-edu">Education</h2><p className="label">Most recent first.</p></div>
           <ol className="degrees timeline">
             {education.map((e) => (
               <li key={e.degree}><span className="d-t">{e.degree}</span><span className="d-f">{e.field}</span><span className="d-i">{e.institution}</span></li>
@@ -107,10 +106,10 @@ export default function Home() {
 
       <section className="sec sec-band" aria-labelledby="home-more">
         <div className="wrap split">
-          <div className="sec-head"><p className="eyebrow">Still to come</p><h2 className="t-h2" id="home-more">Publications, teaching and activities</h2><p className="pend">Added only after confirmation by Anam Ahmed.</p></div>
+          <div className="sec-head"><p className="eyebrow">Explore</p><h2 className="t-h2" id="home-more">More from this portfolio</h2></div>
           <ul className="ledger">
             {ledger.map((l) => (
-              <li key={l.href}><Link href={l.href}><span className="l-t">{l.label}</span><span className="pend">{l.state}</span></Link></li>
+              <li key={l.href}><Link href={l.href}><span className="l-t">{l.label}</span><ArrowRight size={16} className="ar" /></Link></li>
             ))}
           </ul>
         </div>

@@ -1,22 +1,18 @@
 import Link from "next/link";
 import Folio from "../../components/Folio";
 import Masthead from "../../components/Masthead";
-import PendingList from "../../components/PendingList";
-import { pending, profile } from "../../lib/data";
+import { profile } from "../../lib/data";
 import { pageMetadata } from "../../lib/site";
 
-export const metadata = pageMetadata("Teaching", "Teaching of Anam Ahmed, Lecturer in the Department of English at Leading University. Course details and teaching approach are pending confirmation.", "/teaching");
+export const metadata = pageMetadata("Teaching", "Teaching of Anam Ahmed, Lecturer in the Department of English at Leading University, Sylhet.", "/teaching");
 
 export default function Teaching() {
   return (
     <>
-      <Masthead label="Teaching" path="/teaching" title="Teaching" lead="Courses, approach and mentoring, to be added in the lecturer's own words." />
+      <Masthead label="Teaching" path="/teaching" title="Teaching" lead="English language teaching in the Department of English, Leading University." />
       <div className="wrap section">
         <Folio title="Post" id="t-post">
-          <p className="prose">{profile.role} in the {profile.department}, {profile.institution}. The university profile lists the research interests on the <Link className="ink-link" href="/research">research page</Link>; it does not list courses.</p>
-        </Folio>
-        <Folio title="To be confirmed" id="t-pending" pending="No course, syllabus or teaching statement has been supplied.">
-          <PendingList items={pending.teaching} />
+          <p className="prose">{profile.role} in the {profile.department}, {profile.institution}, {profile.city}. The teaching and learning of English as a second language runs through the interests described on the <Link className="ink-link" href="/research">research page</Link>.</p>
         </Folio>
       </div>
     </>

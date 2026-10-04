@@ -11,7 +11,7 @@ export default function Research() {
     <>
       <Masthead label="Research" path="/research" title="Research interests" lead="Second-language learning, the teaching of English, and the habits of mind that go with both." />
       <div className="wrap section">
-        <Folio title="Interests" id="r-int" note={<>The interests are named as the <ExtLink className="ink-link" href={links.facultyProfile} context="the faculty profile">university faculty profile</ExtLink> names them (abbreviations tidied). Grouping them into strands is an editorial arrangement.</>}>
+        <Folio title="Interests" id="r-int" note={<>Drawn from the <ExtLink className="ink-link" href={links.facultyProfile} context="the faculty profile">university faculty profile</ExtLink>.</>}>
           <div data-stagger="">
             {strands.map((s, n) => (
               <div className="strand" key={s.title}>
@@ -22,9 +22,6 @@ export default function Research() {
               </div>
             ))}
           </div>
-        </Folio>
-        <Folio title="Projects and collaborators" id="r-proj" pending="No current research project has been confirmed.">
-          <p className="prose">Projects, methods and collaborators will appear here once Anam Ahmed supplies them. Nothing is inferred from the interests above.</p>
         </Folio>
       </div>
     </>

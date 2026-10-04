@@ -20,11 +20,8 @@ export default function Contact() {
             <li><a href={links.facebook} target="_blank" rel="noopener noreferrer"><span className="l-t l-ico"><Facebook size={22} />{facebookLabel}</span><span className="label">Facebook page<span className="sr"> (opens in a new tab)</span></span></a></li>
           </ul>
         </Folio>
-        <Folio title="Email and phone" id="c-direct" pending="Not published until Anam Ahmed approves them.">
-          <p className="prose">The faculty profile carries contact details of its own. This site repeats none of them without the lecturer&rsquo;s approval. Use the <ExtLink className="ink-link" href={links.facultyProfile} context="the faculty profile">faculty profile</ExtLink> for the university&rsquo;s listed details.</p>
-        </Folio>
-        <Folio title="Scholarly profiles" id="c-profiles" pending="Awaiting confirmation that each profile belongs to this lecturer.">
-          <p className="prose">ORCID, Google Scholar, ResearchGate and similar links appear here once ownership is confirmed. Several people share this name, so none is linked on a guess.</p>
+        <Folio title="Email and phone" id="c-direct">
+          <p className="prose">Email and phone details are listed on the <ExtLink className="ink-link" href={links.facultyProfile} context="the faculty profile">university faculty profile</ExtLink>.</p>
         </Folio>
       </div>
     </>
