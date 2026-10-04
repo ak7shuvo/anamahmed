@@ -19,7 +19,7 @@ export default function CV() {
           </dl>
         </Folio>
         <Folio title="Education" id="cv-edu" pending="Years are not stated in the source.">
-          <ol className="degrees">
+          <ol className="degrees timeline">
             {education.map((e) => (
               <li key={e.degree}><span className="d-t">{e.degree}</span><span className="d-f">{e.field}</span><span className="d-i">{e.institution}</span></li>
             ))}

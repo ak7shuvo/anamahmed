@@ -56,23 +56,27 @@ export default function SiteHeader() {
     };
   }, [open]);
 
+  const main = [{ href: "/", label: "Home" }, ...nav.filter((l) => l.href !== "/cv")];
   return (
     <>
       <header className={`bar${scrolled ? " is-scrolled" : ""}`}>
         <div className="wrap">
           <Link className="brand" href="/" aria-current={pathname === "/" ? "page" : undefined}>
             <span className="brand-mark" aria-hidden="true">{profile.initials}</span>
-            <span className="brand-name"><strong>{profile.name}</strong><small>English · {profile.institution}</small></span>
+            <span className="brand-name">{profile.name}</span>
             <span className="sr">{profile.name} — home</span>
           </Link>
           <nav className="nav" aria-label="Primary">
-            {nav.map((l, n) => <Link key={l.href} href={l.href} style={{ "--n": n } as React.CSSProperties} aria-current={isCurrent(l.href) ? "page" : undefined}><span className="roll" data-text={l.label}><span>{l.label}</span></span></Link>)}
+            {main.map((l) => <Link key={l.href} href={l.href} aria-current={isCurrent(l.href) ? "page" : undefined}>{l.label}</Link>)}
           </nav>
-          <ThemeToggle />
-          <button ref={btnRef} type="button" className="menu-btn" aria-expanded={open} aria-controls="site-sheet" onClick={() => setOpen((o) => !o)}>
-            <span className="lines" aria-hidden="true"><i /><i /></span>
-            <span>{open ? "Close" : "Menu"}</span>
-          </button>
+          <div className="bar-end">
+            <ThemeToggle />
+            <Link className="btn btn-sm bar-cv" href="/cv" aria-current={isCurrent("/cv") ? "page" : undefined}>CV</Link>
+            <button ref={btnRef} type="button" className="menu-btn" aria-expanded={open} aria-controls="site-sheet" onClick={() => setOpen((o) => !o)}>
+              <span className="lines" aria-hidden="true"><i /><i /></span>
+              <span>{open ? "Close" : "Menu"}</span>
+            </button>
+          </div>
         </div>
       </header>
       {open && (

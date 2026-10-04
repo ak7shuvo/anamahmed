@@ -13,8 +13,9 @@ export default function Research() {
       <div className="wrap section">
         <Folio title="Interests" id="r-int" note={<>The interests are named as the <ExtLink className="ink-link" href={links.facultyProfile} context="the faculty profile">university faculty profile</ExtLink> names them (abbreviations tidied). Grouping them into strands is an editorial arrangement.</>}>
           <div data-stagger="">
-            {strands.map((s) => (
+            {strands.map((s, n) => (
               <div className="strand" key={s.title}>
+                <span className="s-no" aria-hidden="true">{String(n + 1).padStart(2, "0")}</span>
                 <h3>{s.title}</h3>
                 <p className="s-note">{s.note}</p>
                 <ul>{s.items.map((i) => <li key={i}>{i}</li>)}</ul>

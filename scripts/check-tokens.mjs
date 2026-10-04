@@ -31,10 +31,10 @@ const pairs = [
   ["ink", "paper", 4.5], ["ink", "paper-2", 4.5], ["ink", "card", 4.5],
   ["ink-2", "paper", 4.5], ["ink-2", "paper-2", 4.5], ["ink-2", "card", 4.5],
   ["ink-3", "paper", 4.5], ["ink-3", "paper-2", 4.5], ["ink-3", "card", 4.5],
-  ["wine", "paper", 4.5], ["wine", "paper-2", 4.5], ["wine", "card", 4.5], ["wine", "wine-soft", 4.5],
-  ["paper", "ink", 4.5], ["paper", "wine", 4.5],
+  ["accent", "paper", 4.5], ["accent", "paper-2", 4.5], ["accent", "card", 4.5], ["accent", "accent-soft", 4.5],
+  ["paper", "ink", 4.5], ["on-accent", "accent", 4.5],
 ];
-const nightPairs = [["on-night", "night", 4.5], ["on-night-2", "night", 4.5], ["on-night-2", "night-2", 4.5], ["rose", "night", 4.5], ["rose", "night-2", 4.5]];
+const nightPairs = [["on-night", "night", 4.5], ["on-night-2", "night", 4.5], ["on-night-2", "night-2", 4.5], ["accent-night", "night", 4.5], ["accent-night", "night-2", 4.5]];
 let low = 99;
 for (const [name, t] of [["light", light], ["dark", dark]]) {
   console.log(`\ncontrast · ${name}`);

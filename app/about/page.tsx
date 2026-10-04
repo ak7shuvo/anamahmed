@@ -23,7 +23,7 @@ export default function About() {
           <div className="prose">{bio.map((p) => <p key={p}>{p}</p>)}</div>
         </Folio>
         <Folio title="Education" id="about-edu" note="Most recent first, as the university profile lists them." pending="Years and thesis titles are not stated in the source.">
-          <ol className="degrees">
+          <ol className="degrees timeline">
             {education.map((e) => (
               <li key={e.degree}><span className="d-t">{e.degree}</span><span className="d-f">{e.field}</span><span className="d-i">{e.institution}</span></li>
             ))}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { nav } from "../lib/nav";
-import { links, profile, sources } from "../lib/data";
+import { profile, sources } from "../lib/data";
+import ProfileLinks from "./ProfileLinks";
 
 export default function Footer() {
   return (
@@ -8,19 +9,16 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-top">
           <div>
-            <p className="foot-name">Anam <em>Ahmed</em></p>
-            <p style={{ marginTop: 18, maxWidth: "40ch" }}>{profile.role}, {profile.department}, {profile.institution}, {profile.city}.</p>
+            <p className="foot-name">Anam Ahmed</p>
+            <p className="foot-desc">{profile.role}, {profile.department}, {profile.institution}, {profile.city}.</p>
           </div>
           <nav aria-label="Footer">
             <h2>Portfolio</h2>
             <ul>{[{ href: "/", label: "Home" }, ...nav].map((l) => <li key={l.href}><Link href={l.href}>{l.label}</Link></li>)}</ul>
           </nav>
           <div>
-            <h2>Official sources</h2>
-            <ul>
-              <li><a href={links.facultyProfile} target="_blank" rel="noopener noreferrer">Faculty profile<span className="sr"> (opens in a new tab)</span></a></li>
-              <li><a href={links.department} target="_blank" rel="noopener noreferrer">Department of English<span className="sr"> (opens in a new tab)</span></a></li>
-            </ul>
+            <h2>Profiles</h2>
+            <ProfileLinks className="plinks plinks-col" />
           </div>
         </div>
         <div className="foot-bottom">

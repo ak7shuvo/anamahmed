@@ -41,7 +41,11 @@ export const links = {
   facultyList: "https://lus.ac.bd/faculty-of-english/",
   facultyProfile: "https://lus.ac.bd/author/anam/",
   department: "https://lus.ac.bd/academic/department-of-english/",
+  /** Official Facebook page supplied by Anam Ahmed, for English spoken / English language teaching activities. */
+  facebook: "https://www.facebook.com/share/1F3o5qdHXP/",
 } as const;
+
+export const facebookLabel = "English Spoken & Language Learning";
 
 /** Biography — plain statements of what the university profile says. No pronouns: preferred pronouns are unconfirmed. */
 export const bio = [
